@@ -18,7 +18,7 @@
 <body>
       <header class="header">
             <div class="header--inner">
-                  <div class="header--el"><a href="#" class="header--el--link">Log in</a></div>
+                  <div class="header--el"><a href="#" class="header--el--link" onclick="login()">Log in</a></div>
                   <div class="header--el"><a href="#" class="header--el--link" onclick="newNote()">New note</a></div>
                   <div class="header--el"><a href="https://vk.com/readyk" class="header--el--link">Send a message</a></div>
                   <div class="header--el"><a href="fotoes.php" class="header--el--link">fotoes</a></div>
@@ -84,9 +84,23 @@
                   </form>
             </div>
       </div>
+      <div class="note--wrapper" id="login">
+           <div class="login" style="padding:2rem;border-radius:30px">
+                  <h2 class="note--title">Login</h2>
+                  <form action="login.php" method="post" class="note--form">
+                        <div class="text-input" style="margin-bottom:.5rem"><input type="text" name="login" placeholder="Login:" required autocorrect="off"></div>
+                        <div class="textarea" style="margin-bottom:15rem"><input name="pswd" placeholder="password:" required autocorrect="off" type="password"></div>
+                        <div class="snr">
+                              <input type="submit">
+                              <input type="reset" value="Отмена" onclick="loginClose()">
+                        </div>
+                  </form>
+            </div>
+      </div>
 
       <script>
             var nw = document.getElementById('newNote');
+            var lg = document.getElementById('login');
       function newNote(){
             nw.style.top = "0%";
       }
@@ -94,10 +108,12 @@
             nw.style.top = "-100%";
       }
 
-            function phpDel(el){
-                  el.getAttribute("data-sql-id");
-
-            }
+      function login(){
+            lg.style.top = "0%";
+      }
+      function loginClose(){
+            lg.style.top = "-100%";
+      }
       </script>
 </body>
 
