@@ -1,4 +1,5 @@
 <?php
+      session_start();
 
       $con = mysqli_connect("localhost", "root", "","my-first-php-sql");
 
@@ -7,7 +8,8 @@
 
       $title = $_POST['title'];
       $text = $_POST['text'];
-      $query = mysqli_query($con,"INSERT INTO `notes`(`date`, `time`, `text`, `title`) VALUES ('$date','$time','$text', '$title')");
+      $user = $_SESSION['logged_user']['login'];
+      $query = mysqli_query($con,"INSERT INTO `notes`(`date`, `time`, `text`, `title`, `user`) VALUES ('$date','$time','$text', '$title', '$user')");
 if($query){ header('Location: index.php');
       ?>
 <center><h1>Note was sent!</h1></center><br><a href="index.php"><center><h2>Home</h2></center></a><?php
