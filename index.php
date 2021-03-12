@@ -21,7 +21,7 @@
                   <div class="header--el"><a href="https://vk.com/readyk" class="header--el--link">Send a message</a></div>
                   <div class="header--el"><a href="fotoes.php" class="header--el--link">fotoes</a></div>
                   <div class="header--el"><a href="files.php" class="header--el--link">Files</a></div>
-                  <div class="header--el"><a href="#" class="header--el--link">For admin</a></div>
+                  <div class="header--el"><a href="foradmin.php" class="header--el--link">For admin</a></div>
                   <div class="header--el"><a href="#" class="header--el--link">Info</a></div>
                   <div class="header--el"><a href="logout.php" class="header--el--link">Log out</a></div>
             </div>
