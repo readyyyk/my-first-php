@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
        $con = mysqli_connect("localhost", "root", "","my-first-php-sql");
-      #if($con){printf("true");}else{printf("false");}
-
-# SELECT `date`, `time`, `text`, `title` FROM `notes` WHERE id = 1
+      session_start();
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
       <meta charset="UTF-8">
       <title>The BEST design in the world</title>
@@ -25,9 +22,18 @@
                   <div class="header--el"><a href="files.php" class="header--el--link">Files</a></div>
                   <div class="header--el"><a href="#" class="header--el--link">For admin</a></div>
                   <div class="header--el"><a href="#" class="header--el--link">Info</a></div>
-                  <div class="header--el"><a href="#" class="header--el--link">Log out</a></div>
+                  <div class="header--el"><a href="logout.php" class="header--el--link">Log out</a></div>
             </div>
+
       </header>
+
+
+     <div class="header-login" style='color:green;background-color:lightgreen;display:flex;justify-content:center;'>
+                  <?php
+                  if( isset($_SESSION['logged_user'])){
+                        echo "<h2 style='color:green;background-color:lightgreen;display:flex;justify-content:center;width:100%'> ". $_SESSION['logged_user']['login'] . "</h2>";
+                  }?>
+            </div>
 
       <main class="main">
 
