@@ -41,6 +41,7 @@
   width: 40%;
   padding: 1rem;
   margin-bottom: 2rem;
+  box-sizing: border-box;
 }
 .datentime {
   display: flex;
@@ -108,4 +109,15 @@
 }
 .tools {
   margin: 0 2rem;
+}
+.df {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.df__el {
+  width: 33.3%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }

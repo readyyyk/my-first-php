@@ -24,7 +24,6 @@
                   <div class="header--el"><a href="#" class="header--el--link">Info</a></div>
                   <div class="header--el"><a href="logout.php" class="header--el--link">Log out</a></div>
             </div>
-
       </header>
 
 
@@ -120,27 +119,7 @@
             </div>
       </div>
 
-      <script>
-            var nw = document.getElementById('newNote');
-            var lg = document.getElementById('login');
-
-            function newNote() {
-                  nw.style.top = "0%";
-            }
-
-            function newNoteClose() {
-                  nw.style.top = "-100%";
-            }
-
-            function login() {
-                  lg.style.top = "0%";
-            }
-
-            function loginClose() {
-                  lg.style.top = "-100%";
-            }
-
-      </script>
+      <script src="header.js"></script>
 </body>
 
 </html>

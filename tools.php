@@ -1,5 +1,9 @@
 <?php
     $con = mysqli_connect("localhost", "root", "","my-first-php-sql");
+<<<<<<< HEAD
+=======
+    session_start();
+>>>>>>> 2679e898fce15554b629dfec65ce8941cf75f9ba
 
     if( isset($_GET['del']) ){
     $con = mysqli_connect("localhost", "root", "","my-first-php-sql");
