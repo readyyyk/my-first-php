@@ -1,5 +1,5 @@
 <?php
-       $con = mysqli_connect("localhost", "root", "","my-first-php-sql");
+        $con = mysqli_connect("localhost", "root", "","my-first-php-sql");
       session_start();
 ?>
 
@@ -12,7 +12,6 @@
 
       <link rel="stylesheet" href="style.index.css">
 </head>
-
 <body>
       <header class="header">
             <div class="header--inner">
@@ -48,11 +47,15 @@
                   <div class='tnu'>
                         <div class='main--el--title'> " . $message['title'] . " </div>
                         <div class='tools'>
-                              <form action='del.php' method='get'>
-                                    <input class='del' type='submit' value='❌'";
+                              <form action='tools.php' method='get'>
+                                    <input class='del' type='submit' value='❌' name='del' ";
                               if($message['user'] != $_SESSION['logged_user']['login'] and $_SESSION['logged_user']['login'] != "admin")
                                     echo "disabled";
                               echo ">
+                                    <input class='del' type='submit' value='✏️' name='upd' ";
+                            if($message['user'] != $_SESSION['logged_user']['login'] and $_SESSION['logged_user']['login'] != "admin")
+                                    echo "disabled";
+                            echo " >
                                     <input type='text' class='iv' value='" . $message['id'] . "' name='sqlid'>
                               </form>
                         </div>

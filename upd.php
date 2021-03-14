@@ -1,0 +1,47 @@
+<?php
+
+    $con = mysqli_connect("localhost", "root", "","my-first-php-sql");
+
+    session_start();
+
+    $id = $_SESSION['upd_sql_id'];
+
+    $messages = mysqli_query($con,"SELECT * FROM `notes` WHERE `id`=$id");
+
+    $message = mysqli_fetch_assoc($messages);
+?>
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>upd</title>
+       <link rel="stylesheet" href="style.index.css">
+   </head>
+   <body style="display:flex;justify-content:center;align-items:center;padding:10rem">
+       <?php
+    echo "
+        <form action='upd-submit.php' method='post' style='min-width:400px'>
+            <div class='main--el' style='width:100%'>
+                  <div class='tnu'>
+                        <input type='text' name='title' class='main--el--title' value=' " . $message['title'] . " '>
+                        <div class='user'> <b style='text-decoration:underline'>" . $message['user'] . "</b> </div>
+                  </div>
+                  <div class='datentime'>
+                        <div class='date'> " . $message['date'] . " </div>
+                        <div class='time'> " . $message['time'] . " </div>
+                  </div>
+                  <textarea class='text' name='text'>
+                        " . $message['text'] . "
+                  </textarea>
+            </div>
+            <div class='snr'>
+                <input type='submit'>
+                <input type='reset' value='Отмена' onclick='document.location.replace(" . '"index.php"' .")'>
+            </div>
+            <input type='text' class='iv' value='" . $message['id'] . "' name='sqlid'>
+        </form>
+            "
+
+?>
+   </body>
+   </html>
