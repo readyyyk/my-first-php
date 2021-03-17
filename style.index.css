@@ -110,3 +110,13 @@
 .tools {
   margin: 0 2rem;
 }
+.df {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.df__el {
+  width: 30%;
+  height: auto;
+}
