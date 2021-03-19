@@ -24,7 +24,6 @@
                   <div class="header--el"><a href="#" class="header--el--link">Info</a></div>
                   <div class="header--el"><a href="logout.php" class="header--el--link">Log out</a></div>
             </div>
-
       </header>
 
 

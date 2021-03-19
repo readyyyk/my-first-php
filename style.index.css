@@ -112,11 +112,12 @@
 }
 .df {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
 }
 .df__el {
-  width: 30%;
+  width: 33.3%;
   height: auto;
+  display: flex;
+  justify-content: center;
 }
