@@ -1,0 +1,6 @@
+-- separate login and registration
+-- add username and dt to files and images
+-- do more comfortable images view
+-- to put con into another file
+
+-- to rewrite css (becouse it is very uncomfortable to use it [and i would start my portfolio])
