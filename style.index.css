@@ -121,3 +121,14 @@
   display: flex;
   justify-content: center;
 }
+.di {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.di__el {
+  width: 100%;
+  height: auto;
+  /*display: flex;
+        justify-content: center;*/
+}

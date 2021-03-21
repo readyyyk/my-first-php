@@ -33,7 +33,7 @@
             $type = $_FILES['myfile']['type'];
             $type = substr($type, strpos($type, '/')+1);
             $tmp_name = $_FILES['myfile']['tmp_name'];
-
+//echo $name;
             $_SESSION['img_i'] += 1;
             $img_i = $_SESSION['img_i'];
 
